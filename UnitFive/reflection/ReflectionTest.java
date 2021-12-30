@@ -29,11 +29,11 @@ public class ReflectionTest {
             Class superc1 = c1.getSuperclass();
             String modifiers = Modifier.toString(c1.getModifiers());
             if(modifiers.length()>0){
-                System.out.println(modifiers + "");
+                System.out.print(modifiers + " ");
             }
-            System.out.print("class" + name);
+            System.out.print("class " + name);
             if(superc1 != null && superc1 != Object.class){
-                System.out.println(" extends" + superc1.getName());
+                System.out.print(" extends" + superc1.getName());
             }
             //print constructor method and field
             System.out.print("\n{\n");
@@ -41,7 +41,7 @@ public class ReflectionTest {
             System.out.println();
             printMethod(c1);
             System.out.println();
-            printFields(c1);
+            //printFields(c1);
             System.out.println("}");
         }catch (ClassNotFoundException e){
             e.printStackTrace();
@@ -100,8 +100,10 @@ public class ReflectionTest {
                 if(j>0){
                     System.out.println(",");
                 }
+                System.out.print(paramTypes[j].getName());
             }
-            System.out.println(");");
+            System.out.print(");");
+            System.out.println("");
         }
     }
 
