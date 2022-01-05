@@ -5,7 +5,7 @@ import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
-
+// TODO 2022-01-04 等有时间自己在写一遍
 public class ObjectAnalyzer {
     private ArrayList<Object> visted = new ArrayList<>();
 
