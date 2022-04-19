@@ -49,6 +49,10 @@ class TalkingClock {
         t.start();
     }
 
+    //timePrinter类变成了listener，timer调用start方法会执行监听器,
+    //简单来说actionPerForemer 已经不是一个单独的方法，只是实现类里面一个必要的方法
+    //如果是单独的方法是需要调用才可以执行
+    //Robin Wan 2022-04-19
     public class TimePrinter implements ActionListener{
 
         @Override

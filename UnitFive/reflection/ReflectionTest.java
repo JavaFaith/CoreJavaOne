@@ -6,6 +6,8 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.Scanner;
 
+
+
 /**
  * This program uses reflection to print all features of a class
  * @version 1.1
@@ -26,6 +28,7 @@ public class ReflectionTest {
         try{
             //print class name and superClass name (if != object)
             Class c1 = Class.forName(name);
+
             Class superc1 = c1.getSuperclass();
             String modifiers = Modifier.toString(c1.getModifiers());
             if(modifiers.length()>0){
@@ -41,7 +44,7 @@ public class ReflectionTest {
             System.out.println();
             printMethod(c1);
             System.out.println();
-            //printFields(c1);
+            printFields(c1);
             System.out.println("}");
         }catch (ClassNotFoundException e){
             e.printStackTrace();
@@ -93,7 +96,7 @@ public class ReflectionTest {
             if(modifiers.length() > 0){
                 System.out.print(modifiers + " ");
             }
-            System.out.println(retType.getName() + "" + name + "(");
+            System.out.println(retType.getName() + " " + name + "(");
             //print parameter types
             Class[] paramTypes = m.getParameterTypes();
             for(int j = 0; j < paramTypes.length;j++){
